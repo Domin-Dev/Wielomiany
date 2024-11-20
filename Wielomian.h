@@ -17,11 +17,15 @@ class Wielomian
 		Wielomian& operator+=(const Wielomian& w1);
 		Wielomian& operator-=(const Wielomian& w1);
 		Wielomian& operator*=(const Wielomian& w1);
+		Wielomian& operator*=(const double& d);
 		Wielomian& operator/=(const Wielomian& w1);
-		~Wielomian() { delete[] wsp; }
+		~Wielomian() { delete[]wsp; }
 }; 
+
+
 
 Wielomian operator+(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator-(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator/(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator*(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator*(const Wielomian& w1, const double& d);

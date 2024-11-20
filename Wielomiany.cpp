@@ -3,13 +3,13 @@
 
 int main()
 {
-	Wielomian w1("10x^2+3x");
-	Wielomian w2("20x^3+10+2+x");
+	Wielomian w1("3x^3-5x^2-2x");
+	Wielomian w2("x^2-2x");
 	w1.Pokaz();
-	w2.Pokaz();
-	w1 *= w2;
-	w1.Pokaz();
+	Wielomian w3 = w1 / w2;
 
+	w3.Pokaz();
+	//w3.~Wielomian();
 }
 
 
