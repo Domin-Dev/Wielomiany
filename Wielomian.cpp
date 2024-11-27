@@ -52,6 +52,11 @@ Wielomian::Wielomian(int stopien)
 	InicjujWielomian(stopien);
 }
 
+Wielomian::Wielomian()
+{
+	InicjujWielomian(0);
+}
+
 Wielomian::Wielomian(const Wielomian& w)
 {
 	this->stopien = w.stopien;
@@ -61,6 +66,16 @@ Wielomian::Wielomian(const Wielomian& w)
 		wsp[i] = w.wsp[i];
 	}
 }
+
+Wielomian::Wielomian(int stopien, double* wsp)
+{
+	InicjujWielomian(stopien);
+	for (size_t i = 0; i <= stopien; i++)
+	{
+		this->wsp[i] = wsp[i];
+	}
+}
+
 
 int WyznaczStopien(const char* napis)
 {
@@ -166,6 +181,55 @@ void Wielomian::WeryfikujStopien()
 		stopien--;
 }
 
+
+Wielomian& Wielomian::Dzielenie(const Wielomian& w1, Wielomian& reszta)
+{
+	if (w1.stopien > stopien) return *this;
+	Wielomian wynik(this->stopien - w1.stopien);
+	Wielomian w = *this;
+	while (true)
+	{
+		double x = w.wsp[w.stopien] / w1.wsp[w1.stopien];
+		int st = w.stopien - w1.stopien;
+		Wielomian nowy(st);
+		nowy.wsp[st] = x;
+		wynik.wsp[st] = x;
+		Wielomian w2 = w1 * nowy;
+		w2 *= -1.0;
+		w += w2;
+		if (w.stopien == 0)
+		{
+			wynik.WeryfikujStopien();
+			reszta = NULL;
+			*this = wynik;
+			return *this;
+		}
+		else if (w.stopien < w1.stopien)
+		{
+			wynik.WeryfikujStopien();
+			reszta = w;
+			*this = wynik;
+			return  *this;
+		}
+	}
+	return *this;
+}
+
+Wielomian Wielomian::Pochodna()
+{
+	if (stopien <= 0) return NULL;
+	Wielomian w1 (stopien - 1);
+	for (size_t i = 0; i <= stopien; i++)
+	{
+		if (i == 0) w1.wsp[i] = 0;
+		else
+		{
+			w1.wsp[i - 1] = wsp[i] * i;
+		}
+	}
+	return w1;
+}
+
 Wielomian& Wielomian::operator+=(const Wielomian& w1)
 {
 	if (w1.stopien > stopien)
@@ -173,6 +237,20 @@ Wielomian& Wielomian::operator+=(const Wielomian& w1)
 	for (int i = 0; i <= w1.stopien; i++)
 	{
 		wsp[i] += w1.wsp[i];
+	}
+	WeryfikujStopien();
+	return *this;
+}
+
+Wielomian& Wielomian::operator=(const Wielomian& w1)
+{
+	if (w1.stopien > stopien) Powieksz(w1.stopien);
+	for (size_t i = 0; i <= stopien; i++)
+	{
+		if (i <= w1.stopien)
+			wsp[i] = w1.wsp[i];
+		else
+			wsp[i] = 0;
 	}
 	WeryfikujStopien();
 	return *this;
@@ -220,33 +298,23 @@ Wielomian& Wielomian::operator*=(const double& d)
 
 Wielomian& Wielomian::operator/=(const Wielomian& w1)
 {
-	if (w1.stopien > stopien) return *this;
-	Wielomian wynik(this->stopien - w1.stopien);
-	Wielomian w = *this;
-	while (true)
-	{
-		double x = w.wsp[w.stopien] / w1.wsp[w1.stopien];
-		int st = w.stopien - w1.stopien;
-		Wielomian nowy(st);
-		nowy.wsp[st] = x;
-		wynik.wsp[st] = x;
-		Wielomian w2 = w1 * nowy;
-		w2 *= -1.0;
-		w += w2;
-		if (w.stopien == 0)
-		{
-			wynik.WeryfikujStopien();
-			*this = wynik;
-			return *this;
-		}
-		else if (w.stopien > w1.stopien)
-		{
-			wynik.WeryfikujStopien();
-			return wynik;
-		}
-	}
+	Wielomian w(0);
+	return Dzielenie(w1, w);
+}
+
+Wielomian& Wielomian::operator%=(const Wielomian& w1)
+{
+	Wielomian w(0);
+	Dzielenie(w1,w);
+	*this = w;
 	return *this;
 }
+
+double Wielomian::operator [](int index)
+{
+	return wsp[index];
+}
+
 
 Wielomian operator+(const Wielomian& w1, const Wielomian& w2)
 {
@@ -266,7 +334,6 @@ Wielomian operator/(const Wielomian& w1, const Wielomian& w2)
 {
 	Wielomian wynik = w1;
 	wynik /= w2;
-	wynik.Pokaz();
 	return wynik;
 }
 
@@ -282,5 +349,12 @@ Wielomian operator*(const Wielomian& w1, const double& d)
 {
 	Wielomian wynik = w1;
 	wynik *= d;
+	return wynik;
+}
+
+Wielomian operator%(const Wielomian& w1, const Wielomian& w2)
+{
+	Wielomian wynik = w1;
+	wynik %= w2;
 	return wynik;
 }
