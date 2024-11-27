@@ -1,6 +1,10 @@
 #include "Wielomian.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
+
+
+using namespace std;
 
 char* BezSpacji(const char* napis);
 int WyznaczStopien(const char* napis);
@@ -164,6 +168,7 @@ void Wielomian::Pokaz()
 	printf("]");
 }
 
+
 void Wielomian::Powieksz(int stopien)
 {
 	double* tab = new double[stopien + 1]();
@@ -242,6 +247,12 @@ Wielomian& Wielomian::operator+=(const Wielomian& w1)
 	return *this;
 }
 
+Wielomian& Wielomian::operator+=(const double& d) 
+{
+	wsp[0] += d;
+	return *this;
+}
+
 Wielomian& Wielomian::operator=(const Wielomian& w1)
 {
 	if (w1.stopien > stopien) Powieksz(w1.stopien);
@@ -263,6 +274,11 @@ Wielomian& Wielomian::operator-=(const Wielomian& w1)
 		w1.wsp[i] = -w1.wsp[i];
 	}
 	return *this += w1;
+}
+
+Wielomian& Wielomian::operator-=(const double& d)
+{
+	return operator+=(-d);
 }
 
 Wielomian& Wielomian::operator*=(const Wielomian& w1)
@@ -302,6 +318,15 @@ Wielomian& Wielomian::operator/=(const Wielomian& w1)
 	return Dzielenie(w1, w);
 }
 
+Wielomian& Wielomian::operator/=(const double& d)
+{
+	double w[1];
+	w[0] = d;
+	Wielomian w1(0, w);
+	Wielomian w2(0);
+	return Dzielenie(w1, w2);
+}
+
 Wielomian& Wielomian::operator%=(const Wielomian& w1)
 {
 	Wielomian w(0);
@@ -315,6 +340,37 @@ double Wielomian::operator [](int index)
 	return wsp[index];
 }
 
+double Wielomian::operator()(int index)
+{
+	double wynik = wsp[stopien];
+	for (int i = stopien - 1; i >= 0; i--)
+		wynik = wynik * index + wsp[i];
+	return wynik;
+}
+
+
+
+
+
+std::ostream& operator<<(std::ostream& os, const Wielomian& w)
+{	
+	os << "\n";
+	for (int i = w.stopien; i >= 0; i--)
+	{
+		if (w.wsp[i] != 0)
+		{
+			if (i == 0)
+			{
+				os << w.wsp[i];
+			}
+			else
+			{
+				os << w.wsp[i] << "xj^" << i;
+			}
+		}
+	}
+	return os;
+}
 
 Wielomian operator+(const Wielomian& w1, const Wielomian& w2)
 {
@@ -323,6 +379,20 @@ Wielomian operator+(const Wielomian& w1, const Wielomian& w2)
 	return wynik;
 }
 
+Wielomian operator+(const Wielomian& w1, const double& d)
+{
+	Wielomian wynik = w1;
+	wynik += d;
+	return wynik;
+}
+
+Wielomian operator+(const double& d, const Wielomian& w1)
+{
+	return (operator+(w1, d));
+}
+
+
+
 Wielomian operator-(const Wielomian& w1, const Wielomian& w2)
 {
 	Wielomian wynik = w1;
@@ -330,12 +400,22 @@ Wielomian operator-(const Wielomian& w1, const Wielomian& w2)
 	return wynik;
 }
 
+Wielomian operator-(const Wielomian& w1, const double& d)
+{	
+	Wielomian wynik = w1;
+	wynik -= d;
+	return wynik;
+}
+
+
 Wielomian operator/(const Wielomian& w1, const Wielomian& w2)
 {
 	Wielomian wynik = w1;
 	wynik /= w2;
 	return wynik;
 }
+
+
 
 Wielomian operator*(const Wielomian& w1, const Wielomian& w2)
 {

@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 class Wielomian
 {
 	double* wsp;
@@ -20,21 +22,35 @@ class Wielomian
 		void Pokaz();
 		Wielomian Pochodna();
 		Wielomian& operator+=(const Wielomian& w1);
+		Wielomian& operator+=(const double& d);
 		Wielomian& operator-=(const Wielomian& w1);
+		Wielomian& operator-=(const double& d);
 		Wielomian& operator*=(const Wielomian& w1);
 		Wielomian& operator*=(const double& d);
 		Wielomian& operator/=(const Wielomian& w1);
+		Wielomian& operator/=(const double& d);
 		Wielomian& operator%=(const Wielomian& w1);
 		Wielomian& operator=(const Wielomian& w1);
+		
+		friend std::ostream& operator<<(std::ostream& os, const Wielomian& w);
+	
 		double operator[](int index);
+		double operator()(int index);
 		~Wielomian() { delete[]wsp; }
 }; 
 
 
 
 Wielomian operator+(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator+(const Wielomian& w1, const double& d);
+Wielomian operator+(const double& d    , const Wielomian& w1);
+
 Wielomian operator-(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator-(const Wielomian& w1, const double& d);
+
 Wielomian operator/(const Wielomian& w1, const Wielomian& w2);
+
 Wielomian operator*(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator*(const Wielomian& w1, const double& d);
 Wielomian operator%(const Wielomian& w1, const Wielomian& w2);
+
