@@ -3,15 +3,17 @@
 
 class Wielomian
 {
-	double* wsp;
-	int stopien;
-	void InicjujWielomian(int stopien);
 	char* AnalizujJednomian(const char* napis);
 	void Analizuj(const char* napis);
 	void Powieksz(int stopien);
 	void WeryfikujStopien();
 	Wielomian& Dzielenie(const Wielomian& w1, Wielomian& reszta);
 
+
+	protected:
+		double* wsp;
+		int stopien;
+		void InicjujWielomian(int stopien);
 	public:
 		Wielomian(const char* napis);
 		Wielomian(const Wielomian& w);
@@ -23,17 +25,26 @@ class Wielomian
 		Wielomian Pochodna();
 		Wielomian& operator+=(const Wielomian& w1);
 		Wielomian& operator+=(const double& d);
+
 		Wielomian& operator-=(const Wielomian& w1);
 		Wielomian& operator-=(const double& d);
+
 		Wielomian& operator*=(const Wielomian& w1);
 		Wielomian& operator*=(const double& d);
+
 		Wielomian& operator/=(const Wielomian& w1);
 		Wielomian& operator/=(const double& d);
+
 		Wielomian& operator%=(const Wielomian& w1);
 		Wielomian& operator=(const Wielomian& w1);
 		
 		friend std::ostream& operator<<(std::ostream& os, const Wielomian& w);
-	
+		friend std::istream& operator>>(std::istream& is, Wielomian& w);
+
+		friend Wielomian operator/(const Wielomian& w1, const double& d);
+
+		friend Wielomian operator-(const double& d, const Wielomian& w1);
+		
 		double operator[](int index);
 		double operator()(int index);
 		~Wielomian() { delete[]wsp; }
@@ -48,9 +59,21 @@ Wielomian operator+(const double& d    , const Wielomian& w1);
 Wielomian operator-(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator-(const Wielomian& w1, const double& d);
 
+
 Wielomian operator/(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator/(const double& d, const Wielomian& w1);
+
 
 Wielomian operator*(const Wielomian& w1, const Wielomian& w2);
 Wielomian operator*(const Wielomian& w1, const double& d);
-Wielomian operator%(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator*(const double& d, const Wielomian& w1);
 
+Wielomian operator%(const Wielomian& w1, const Wielomian& w2);
+Wielomian operator%(const Wielomian& w1, const double& d);
+Wielomian operator%(const double& d, const Wielomian& w1);
+
+class Jednomian : public Wielomian
+{;
+	public:
+		Jednomian(int stopien, double wartosc);
+};

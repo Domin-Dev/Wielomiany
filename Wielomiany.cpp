@@ -5,14 +5,13 @@
 using namespace std;
 
 int main()
-{ 
-	Wielomian w1("5x^3-2x^2+1x-4");
-	Wielomian w2("x^2-3");
+{
+	Wielomian w1("3x^3-5x^2-2x");
+	Wielomian w2("x^2-2x");
 
-	Wielomian w5("x^2");
-	Wielomian w6("x^2");
 
-	cout << w5 << w1; 
+	Wielomian w3 = w1 % w2;
+	w3.Pokaz();
 }
 
 
