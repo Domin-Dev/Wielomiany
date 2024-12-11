@@ -85,8 +85,8 @@ class BazaWielomianu
 		int stopien;
 
 	public:
-		virtual double operator[](int index) {};
-		virtual void Pokaz(){};
+		virtual double operator[](int index) = 0;
+		virtual void Pokaz() {};
 };
 
 class Jednomian : public BazaWielomianu
@@ -94,8 +94,9 @@ class Jednomian : public BazaWielomianu
 	double wartosc;
 
 	public:
-		double operator[](int index);
-
+		double operator[](int index) override;
+		Jednomian(double wartosc, int stopien);
+		void Pokaz() override;
 };
 
 
@@ -112,11 +113,12 @@ protected:
 		void InicjujWielomian(int stopien);
 
 public:
-		double operator[](int index);
+		double operator[](int index) override;
 		Wielomian(const char* napis);
 		Wielomian(const Wielomian& w);
 		Wielomian(int stopien);
 		Wielomian();
 		Wielomian(int stopien, double* wsp);
 		void Pokaz() override;
+
 };

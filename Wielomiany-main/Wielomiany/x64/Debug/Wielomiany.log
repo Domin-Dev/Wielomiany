@@ -1,5 +1,2 @@
-﻿  Wielomian.cpp
-  Wielomiany.cpp
-  Generowanie kodu...
-C:\Users\pk\Desktop\Wielomiany-main\Wielomiany.cpp(13,20): error C2676: dwuargumentowy "%": "Wielomian" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
-C:\Users\pk\Desktop\Wielomiany-main\Wielomian.h(88,1): error C4716: "BazaWielomianu::operator[]": musi zwracać wartość
+﻿  Wielomiany.cpp
+  Wielomiany.vcxproj -> C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\x64\Debug\Wielomiany.exe

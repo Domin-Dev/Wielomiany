@@ -10,6 +10,42 @@ char* BezSpacji(const char* napis);
 int WyznaczStopien(const char* napis);
 
 
+////// ////////// //////
+///// /Jednomian ///////
+//// ////////// ////////
+
+Jednomian::Jednomian(double wartosc, int stopien)
+{
+	this->wartosc = wartosc;
+	this->stopien = stopien;        
+}
+
+double Jednomian::operator[](int index)
+{
+	return wartosc;
+}
+
+void Jednomian::Pokaz()
+{
+	if (wartosc == 0)
+	{
+		printf("0");
+	}
+	else
+	{
+		if (stopien > 0)
+		{
+			printf("%.3lfx^%d",wartosc,stopien);
+		}
+		else
+		{
+			printf("%.3lf", wartosc, stopien);
+		}
+	}
+}
+
+//////////////////////
+//////////////////////
 
 Wielomian::Wielomian(const char* napis)
 {
@@ -52,6 +88,10 @@ void Wielomian::InicjujWielomian(int stopien)
 	this->wsp = new double[stopien + 1]();
 }
 
+double Wielomian::operator[](int index)
+{
+	return wsp[index];
+}
 
 void Wielomian::Analizuj(const char* napis)
 {
