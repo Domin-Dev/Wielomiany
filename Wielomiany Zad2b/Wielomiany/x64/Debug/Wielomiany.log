@@ -1,0 +1,271 @@
+﻿  Wielomian.cpp
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,10): error C3646: "Pokaz": nieznany specyfikator przesłonięcia
+  (kompilowanie pliku źródłowego „Wielomian.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,15): error C2059: błąd składniowy: „(”
+  (kompilowanie pliku źródłowego „Wielomian.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,23): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „Wielomian.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(17,24): error C2039: „Pokaz”: nie jest składową elementu „BazaWielomianu”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(61,7):
+      zobacz deklarację „BazaWielomianu”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(20,15): error C2065: "stopien": niezadeklarowany identyfikator
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(22,9): error C2355: „this”: Można tworzyć odwołania wyłącznie wewnątrz niestatycznych funkcji składowych lub niestatycznych inicjatorów składowych danych
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(26,12): error C2355: „this”: Można tworzyć odwołania wyłącznie wewnątrz niestatycznych funkcji składowych lub niestatycznych inicjatorów składowych danych
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(76,22): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(76,22):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(76,22):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(78,27): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(78,27):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(78,27):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(79,9): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(79,9):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(79,9):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(243,22): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(243,22):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(243,22):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(245,20): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(245,20):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(245,20):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,12): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,14): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,14):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(246,14):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(272,13): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(272,13):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(272,13):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(276,12): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(276,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(276,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(277,12): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(277,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(277,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,13): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,13):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,13):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,17): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,17):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,17):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(282,22): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(284,13): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(284,13):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(284,13):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(284,22): error C2676: dwuargumentowy "*": "const Wielomian" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(285,6): error C2676: dwuargumentowy "*=": "Wielomian" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(290,13): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(290,13):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.cpp(290,13):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+  Wielomiany.cpp
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,10): error C3646: "Pokaz": nieznany specyfikator przesłonięcia
+  (kompilowanie pliku źródłowego „Wielomiany.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,15): error C2059: błąd składniowy: „(”
+  (kompilowanie pliku źródłowego „Wielomiany.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(70,23): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „Wielomiany.cpp”)
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,12): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,14): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,14):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(9,14):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(10,12): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(10,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(10,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,12): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,14): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,14):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(12,14):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(13,12): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(13,12):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(13,12):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(14,5): error C2039: „Pokaz”: nie jest składową elementu „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(16,5): error C2039: „Pokaz”: nie jest składową elementu „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(18,5): error C2259: „Jednomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(18,5):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(18,5):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(18,16): error C2039: „Pokaz”: nie jest składową elementu „Jednomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(73,7):
+      zobacz deklarację „Jednomian”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(20,5): error C2259: „Wielomian”: nie można utworzyć wystąpienia klasy abstrakcyjnej
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(20,5):
+      z powodu następujących składowych:
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(20,5):
+      "double BazaWielomianu::operator [](int) const": jest abstrakcyjna
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(68,18):
+      zobacz deklarację „BazaWielomianu::operator []”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(20,16): error C2039: „Pokaz”: nie jest składową elementu „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+  
+C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomiany.cpp(21,5): error C2039: „Pokaz”: nie jest składową elementu „Wielomian”
+      C:\Users\pk\Desktop\Wielomiany-main\Wielomiany-main\Wielomian.h(84,7):
+      zobacz deklarację „Wielomian”
+  
+  Generowanie kodu...
