@@ -101,6 +101,8 @@ public:
 		Wielomian Pochodna();
 		Wielomian& operator+=(const BazaWielomianu& w1);
 		Wielomian& operator-=(const BazaWielomianu& w1);
+		Wielomian& operator*=(const BazaWielomianu& w1);
+		Wielomian& operator/=(const BazaWielomianu& w1);
 
 		Wielomian& operator+=(const double& d);
 		Wielomian& operator-=(const double& d);
@@ -108,10 +110,21 @@ public:
 		Wielomian& operator/=(const double& d);
 
 		Wielomian& operator=(const BazaWielomianu& w1);
-		Wielomian& operator*=(const BazaWielomianu& w1);
+
 
 
 		~Wielomian() { delete[]wsp; }
 
 };
+
 Wielomian operator+(const BazaWielomianu& w1, const BazaWielomianu& w2);
+Wielomian operator+(const BazaWielomianu& w1, const double& d);
+Wielomian operator+(const double& d, const BazaWielomianu& w1);
+
+Wielomian operator-(const BazaWielomianu& w1, const BazaWielomianu& w2);
+Wielomian operator-(const BazaWielomianu& w1, const double& d);
+Wielomian operator-(const double& d, const BazaWielomianu& w1);
+
+Wielomian operator*(const BazaWielomianu& w1, const BazaWielomianu& w2);
+Wielomian operator*(const BazaWielomianu& w1, const double& d);
+Wielomian operator*(const double& d, const BazaWielomianu& w1);

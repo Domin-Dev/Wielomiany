@@ -1,0 +1,7 @@
+﻿  Szablony.cpp
+K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(54,15): error C2672: „sprawdz”: nie znaleziono zgodnej przeciążonej funkcji
+      K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(39,5):
+      może to być „int sprawdz(T *,int,F)”
+          K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(54,15):
+          „int sprawdz(T *,int,F)”: nie można wywnioskować argumentu szablon dla elementu „T *” z „std::vector<int,std::allocator<int>>”
+  

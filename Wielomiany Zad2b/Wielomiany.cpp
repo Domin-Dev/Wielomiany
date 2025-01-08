@@ -13,8 +13,8 @@ int main()
 	Jednomian j2(10,3);
 
 	cout << w1.Pokaz() << endl;
-	Wielomian w3 = j1 + j2;
+	w1 /= w2;
 
-	cout << w3.Pokaz() << endl;
+	cout << w1.Pokaz() << endl;
 }
 

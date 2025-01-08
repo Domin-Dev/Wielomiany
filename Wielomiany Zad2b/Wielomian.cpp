@@ -337,59 +337,117 @@ Wielomian operator+(const BazaWielomianu& w1, const BazaWielomianu& w2)
 	return wynik;
 }
 
+Wielomian operator-(const BazaWielomianu& w1, const BazaWielomianu& w2)
+{
+	Wielomian wynik(w1);
+	wynik -= w2;
+	return wynik;
+}
+
+Wielomian operator+(const BazaWielomianu& w1, const double& d)
+{
+	Wielomian wynik(w1);
+	wynik += d;
+	return wynik;
+}
+
+Wielomian operator+(const double& d, const BazaWielomianu& w1)
+{
+	return (operator+(w1, d));
+}
+
+Wielomian operator-(const BazaWielomianu& w1, const double& d)
+{	
+	Wielomian wynik(w1);
+	wynik -= d;
+	return wynik;
+}
+
+Wielomian operator*(const BazaWielomianu& w1, const BazaWielomianu& w2)
+{
+	Wielomian wynik(w1);
+	wynik *= w2;
+	return wynik;
+}
 
 
 
+Wielomian operator*(const BazaWielomianu& w1, const double& d)
+{
+	Wielomian wynik(w1);
+	wynik *= d;
+	return wynik;
+}
+
+Wielomian operator*(const double& d, const Wielomian& w1)
+{
+	Wielomian wynik = w1;
+	wynik *= d;
+	return wynik;
+}
+
+Wielomian operator*(const double& d, const BazaWielomianu& w1)
+{
+	Wielomian wynik = w1;
+	wynik *= d;
+	return wynik;
+}
+
+Wielomian operator-(const double& d, const BazaWielomianu& w1)
+{
+	Wielomian wynik(w1);
+	wynik *= -1;
+	wynik += d;
+	return wynik;
+}
+
+Wielomian& Wielomian::Dzielenie(const Wielomian& w1, Wielomian& reszta)
+{
+	if (w1.stopien > stopien)
+	{
+		reszta = *this;
+		Wielomian z(0);
+		*this = z;
+		return *this;
+	}
+	Wielomian wynik(this->stopien - w1.stopien);
+	Wielomian w = *this;
+	while (true)
+	{
+		double x = w.wsp[w.stopien] / w1.wsp[w1.stopien];
+		int st = w.stopien - w1.stopien;	
+		Jednomian nowy(st, x);
+		wynik.wsp[st] = x;
+		Wielomian w2 = w1 * nowy;
+		w2 *= -1.0;
+		w += w2;
+		if (w.stopien == 0)
+		{
+			wynik.WeryfikujStopien();
+			reszta = NULL;
+			*this = wynik;
+			return *this;
+		}
+		else if (w.stopien < w1.stopien)
+		{
+			wynik.WeryfikujStopien();
+
+			reszta = w;
+			*this = wynik;
+			return  *this;
+		}
+	}
+	return *this;
+}
 
 
-//Wielomian& Wielomian::operator/=(const Wielomian& w1)
-//{
-//	Wielomian w(0);
-//	return Dzielenie(w1, w);
-//}
 
-
-//Wielomian& Wielomian::Dzielenie(const Wielomian& w1, Wielomian& reszta)
-//{
-//	if (w1.stopien > stopien)
-//	{
-//		reszta = *this;
-//		Wielomian z(0);
-//		*this = z;
-//		return *this;
-//	}
-//	Wielomian wynik(this->stopien - w1.stopien);
-//	Wielomian w = *this;
-//	while (true)
-//	{
-//		double x = w.wsp[w.stopien] / w1.wsp[w1.stopien];
-//		int st = w.stopien - w1.stopien;	
-//		Jednomian nowy(st, x);
-//		wynik.wsp[st] = x;
-//		Wielomian w2 = w1 * nowy;
-//		w2 *= -1.0;
-//		w += w2;
-//		if (w.stopien == 0)
-//		{
-//			wynik.WeryfikujStopien();
-//			reszta = NULL;
-//			*this = wynik;
-//			return *this;
-//		}
-//		else if (w.stopien < w1.stopien)
-//		{
-//			wynik.WeryfikujStopien();
-//
-//			reszta = w;
-//			*this = wynik;
-//			return  *this;
-//		}
-//	}
-//	return *this;
-//}
-//
-
-
+Wielomian& Wielomian::operator/=(const BazaWielomianu& w1)
+{
+	Wielomian w(0);
+	Wielomian w2(w1);
+	return Dzielenie(w2, w);
+}
 
 
 
@@ -454,43 +512,16 @@ Wielomian operator+(const BazaWielomianu& w1, const BazaWielomianu& w2)
 //
 
 //
-//Wielomian operator+(const Wielomian& w1, const double& d)
-//{
-//	Wielomian wynik = w1;
-//	wynik += d;
-//	return wynik;
-//}
+
 //
-//Wielomian operator+(const double& d, const Wielomian& w1)
-//{
-//	return (operator+(w1, d));
-//}
+
 //
 //
-//Wielomian operator-(const Wielomian& w1, const Wielomian& w2)
-//{
-//	Wielomian wynik = w1;
-//	wynik -= w2;
-//	return wynik;
-//}
+
 //
-//Wielomian operator-(const Wielomian& w1, const double& d)
-//{	
-//	Wielomian wynik = w1;
-//	wynik -= d;
-//	return wynik;
-//}
+
 //
-//Wielomian operator-(const double& d, const Wielomian& w1)
-//{
-//	Wielomian wynik = w1;
-//	for (size_t i = 0; i <= wynik.stopien; i++)
-//	{
-//		wynik.wsp[i] = -wynik.wsp[i];
-//	}
-//	wynik.wsp[0] += d;
-//	return wynik;
-//}
+
 //
 //
 //Wielomian operator/(const Wielomian& w1, const Wielomian& w2)
@@ -519,28 +550,8 @@ Wielomian operator+(const BazaWielomianu& w1, const BazaWielomianu& w2)
 //	return wynik;
 //}
 //
-//Wielomian operator*(const Wielomian& w1, const Wielomian& w2)
-//{
-//	
-//	Wielomian wynik = w1;
-//	wynik *= w2;
-//	return wynik;
-//}
-//
-//Wielomian operator*(const Wielomian& w1, const double& d)
-//{
-//	Wielomian wynik = w1;
-//	wynik *= d;
-//	return wynik;
-//}
-//
-//Wielomian operator*(const double& d, const Wielomian& w1)
-//{
-//	Wielomian wynik = w1;
-//	wynik *= d;
-//	return wynik;
-//}
-//
+
+
 //Wielomian operator%(const Wielomian& w1, const Wielomian& w2)
 //{
 //	Wielomian wynik = w1;
