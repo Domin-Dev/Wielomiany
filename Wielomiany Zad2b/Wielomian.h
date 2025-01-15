@@ -4,58 +4,6 @@
 
 using namespace std;
 
-//		Wielomian& operator+=(const Wielomian& w1);
-//		Wielomian& operator+=(const double& d);
-//
-//		Wielomian& operator-=(const Wielomian& w1);
-//		Wielomian& operator-=(const double& d);
-//
-//		Wielomian& operator*=(const Wielomian& w1);
-//		Wielomian& operator*=(const double& d);
-//
-//		Wielomian& operator/=(const Wielomian& w1);
-//		Wielomian& operator/=(const double& d);
-//
-//		Wielomian& operator%=(const Wielomian& w1);
-//		Wielomian& operator=(const Wielomian& w1);
-//		
-//		friend std::ostream& operator<<(std::ostream& os, const Wielomian& w);
-//		friend std::istream& operator>>(std::istream& is, Wielomian& w);
-//
-//		friend Wielomian operator/(const Wielomian& w1, const double& d);
-//
-//		friend Wielomian operator-(const double& d, const Wielomian& w1);
-//		
-//		double operator[](int index);
-//		double operator()(int index);
-//	
-//}; 
-//
-
-//
-//Wielomian operator+(const Wielomian& w1, const Wielomian& w2);
-//Wielomian operator+(const Wielomian& w1, const double& d);
-//Wielomian operator+(const double& d    , const Wielomian& w1);
-//
-//Wielomian operator-(const Wielomian& w1, const Wielomian& w2);
-//Wielomian operator-(const Wielomian& w1, const double& d);
-//
-//
-//Wielomian operator/(const Wielomian& w1, const Wielomian& w2);
-//Wielomian operator/(const double& d, const Wielomian& w1);
-//
-//
-//Wielomian operator*(const Wielomian& w1, const Wielomian& w2);
-//Wielomian operator*(const Wielomian& w1, const double& d);
-//Wielomian operator*(const double& d, const Wielomian& w1);
-//
-//Wielomian operator%(const Wielomian& w1, const Wielomian& w2);
-//Wielomian operator%(const Wielomian& w1, const double& d);
-//Wielomian operator%(const double& d, const Wielomian& w1);
-//
-
-
-
 class BazaWielomianu
 {
 	protected:
@@ -103,18 +51,15 @@ public:
 		Wielomian& operator-=(const BazaWielomianu& w1);
 		Wielomian& operator*=(const BazaWielomianu& w1);
 		Wielomian& operator/=(const BazaWielomianu& w1);
+		Wielomian& operator%=(const BazaWielomianu& w1);
 
 		Wielomian& operator+=(const double& d);
 		Wielomian& operator-=(const double& d);
 		Wielomian& operator*=(const double& d);
 		Wielomian& operator/=(const double& d);
 
-		Wielomian& operator=(const BazaWielomianu& w1);
-
-
-
+		Wielomian& operator=(const Wielomian& w1);
 		~Wielomian() { delete[]wsp; }
-
 };
 
 Wielomian operator+(const BazaWielomianu& w1, const BazaWielomianu& w2);
@@ -128,3 +73,15 @@ Wielomian operator-(const double& d, const BazaWielomianu& w1);
 Wielomian operator*(const BazaWielomianu& w1, const BazaWielomianu& w2);
 Wielomian operator*(const BazaWielomianu& w1, const double& d);
 Wielomian operator*(const double& d, const BazaWielomianu& w1);
+
+Wielomian operator/(const BazaWielomianu& w1, const BazaWielomianu& w2);
+Wielomian operator/(const double& d, const BazaWielomianu& w1);
+Wielomian operator/(const BazaWielomianu& w1, const double& d);
+
+Wielomian operator%(const BazaWielomianu& w1, const BazaWielomianu& w2);
+Wielomian operator%(const BazaWielomianu& w1, const double& d);
+Wielomian operator%(const double& d, const BazaWielomianu& w1);
+
+
+std::istream& operator>>(std::istream& is, Wielomian& w);
+std::ostream & operator<<(std::ostream & os, const BazaWielomianu & w);
