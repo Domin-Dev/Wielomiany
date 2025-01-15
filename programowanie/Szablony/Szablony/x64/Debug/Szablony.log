@@ -1,7 +1,4 @@
 ﻿  Szablony.cpp
-K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(54,15): error C2672: „sprawdz”: nie znaleziono zgodnej przeciążonej funkcji
-      K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(39,5):
-      może to być „int sprawdz(T *,int,F)”
-          K:\Studenci\PK\Prywatne\322958\programowanie\Szablony\Szablony\Szablony.cpp(54,15):
-          „int sprawdz(T *,int,F)”: nie można wywnioskować argumentu szablon dla elementu „T *” z „std::vector<int,std::allocator<int>>”
-  
+C:\Users\pk\Desktop\Wielomiany-main\programowanie\Szablony\Szablony\Szablony.cpp(57,27): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\pk\Desktop\Wielomiany-main\programowanie\Szablony\Szablony\Szablony.cpp(57,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+  Szablony.vcxproj -> C:\Users\pk\Desktop\Wielomiany-main\programowanie\Szablony\x64\Debug\Szablony.exe
