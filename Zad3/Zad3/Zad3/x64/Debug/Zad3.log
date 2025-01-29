@@ -1,0 +1,4 @@
+﻿  Zad3.cpp
+C:\Users\pk\Desktop\Wielomiany-main\Zad3\Zad3\Zad3\Zad3.cpp(77,24): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\pk\Desktop\Wielomiany-main\Zad3\Zad3\Zad3\Zad3.cpp(84,6): warning C4326: zwracany typ "main" powinien być "int" zamiast "void"
+  Zad3.vcxproj -> C:\Users\pk\Desktop\Wielomiany-main\Zad3\Zad3\x64\Debug\Zad3.exe
