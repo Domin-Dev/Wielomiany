@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Zad3.cpp" />
+    <ClCompile Include="Bloczek.cpp" />
+    <ClCompile Include="Plansza.cpp" />
+    <ClCompile Include="Ruch.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Szukanie.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bloczki.h" />
+    <ClInclude Include="Szukanie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
