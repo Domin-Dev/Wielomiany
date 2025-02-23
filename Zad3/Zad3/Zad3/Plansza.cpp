@@ -249,6 +249,42 @@ using namespace std;
 		return 'e';
 	}
 
+	bool Plansza::jestZnak(Bloczek blok)
+	{
+		for (int i = wysokosc - 1; i >= 0; i--)
+		{
+			for (int j = 0; j < szerokosc; j++)
+			{
+				Bloczek* bloczek = bloczki[j][i];
+				if (typeid(*bloczek) == typeid(DynamicznyBloczek))
+				{
+					if (blok.porownaj(*bloczek)) return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	bool Plansza::moznaUkonczyc()
+	{
+		for (int i = wysokosc - 1; i >= 0; i--)
+		{
+			for (int j = 0; j < szerokosc; j++)
+			{
+				Bloczek* bloczek = bloczki[j][i];
+				if (typeid(*bloczek) == typeid(DynamicznyBloczek))
+				{
+					if (!jestZnak(*bloczek)) return false;
+				}
+			}
+		}
+		return true;
+	}
+
+
+
+
+
 
 	bool Plansza::wygrana()
 	{

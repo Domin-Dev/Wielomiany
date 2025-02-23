@@ -53,14 +53,11 @@ void pobierzRozmiar(char * fileName, int * szerokosc, int * wysokosc)
 void main()
 {
 	Plansza * plansza = wczytajPlansze();
-	Drzewo drzwo = (Drzewo)malloc(sizeof(ElementDrzewa));
+	Drzewo drzwo = new ElementDrzewa();
 	plansza->wyswietlPlansze();
-	Plansza * k = new Plansza(*plansza);
-
-	ElementDrzewa * el = new ElementDrzewa();
-	drzwo->dodajDziecko();
-
-	//drzwo->rodzic = 0;
-
+	Plansza* k = new Plansza(*plansza);
+	drzwo->rodzic = 0;
+	drzwo->ruch = nullptr;
+	drzwo->plansza = k;
     SzukajWGlab(drzwo);
 }

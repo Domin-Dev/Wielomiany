@@ -15,6 +15,7 @@ public:
 	Bloczek();
 	virtual char pobierzZnak();
 	void pobierzPozycje(int& x, int& y);
+	bool porownaj(Bloczek b);
 };
 
 class DynamicznyBloczek : public Bloczek
@@ -52,6 +53,7 @@ class Plansza
 	bool wolnePole(int x, int y);
 	bool takiSamZnak(int x, int y, char c);
 	char pobierzChar(int x, int y);
+	bool jestZnak(Bloczek blok);
 
 public:
 	Plansza(int szerokosc, int wysokosc);
@@ -62,4 +64,5 @@ public:
 	void zaktualizujPlansze();
 	void wykonajRuch(Ruch ruch);
 	bool wygrana();
+	bool moznaUkonczyc();
 };

@@ -25,3 +25,8 @@
 		x = posX;
 		y = posY;
 	}
+
+	bool Bloczek::porownaj(Bloczek b)
+	{
+		return b.znak = znak && b.posX == posX && b.posY == posY;
+	}

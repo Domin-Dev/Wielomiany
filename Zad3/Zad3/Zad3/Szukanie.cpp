@@ -12,55 +12,60 @@ using namespace std;
 
 void SzukajWGlab(Drzewo drzwo)
 {
-	Drzewo* wynik = 0;
-	SzukajWGlab(drzwo, 0, INT_MAX, wynik);
+	Drzewo wynik = 0;
+	int k = INT_MAX;
+	SzukajWGlab(drzwo, 0, k, wynik);
+
+	cout << "Minimum solution length = " << k << endl;
+	if (k == INT_MAX)
+	{
+		cout << "Brak rozwiazania " << endl;
+	}
+	else
+	{
+		while (wynik != 0)
+		{
+			(wynik)->plansza->wyswietlPlansze();
+			wynik = wynik->rodzic;
+		}
+	}
 }
 
-void SzukajWGlab(Drzewo drzwo, int liczbaRuchow, int minimalna, Drzewo* wynik)
+void SzukajWGlab(Drzewo drzwo, int liczbaRuchow, int & minimalna, Drzewo & wynik)
 {
+	cout << liczbaRuchow << endl;
 	if (drzwo->plansza->wygrana())
 	{
 		if (liczbaRuchow < minimalna)
 		{
 			minimalna = liczbaRuchow;
-			wynik = &drzwo;
+			wynik = drzwo;
 		}
 	}
+	if (liczbaRuchow >= minimalna || liczbaRuchow > 9 || !drzwo->plansza->moznaUkonczyc()) return;
 	vector<Ruch> mozliweRuchy = drzwo->plansza->pobierzRuchy();
+	int i = 0;
+	drzwo->dzieci = new ElementDrzewa*[mozliweRuchy.size()];
+	drzwo->liczbaDzieci = mozliweRuchy.size();
 	for (Ruch r : mozliweRuchy)
 	{
-		dodajDziecko(drzwo, r);
+		dodajDziecko(drzwo, r,i);
+		i++;
 	}
-	//for (ElementDrzewa r : drzwo->dzieci)
-	//{
-	//	SzukajWGlab(&r, liczbaRuchow + 1,minimalna, wynik);
-	//	if (liczbaRuchow + 1 >= minimalna) return;
-	//}
-
+	
+	for (size_t i = 0; i < drzwo->liczbaDzieci; i++)
+	{
+		SzukajWGlab(drzwo->dzieci[i], liczbaRuchow + 1, minimalna, wynik);
+		if (liczbaRuchow + 1 >= minimalna || liczbaRuchow + 1 > 9) return;
+	}
 }
 
-Drzewo dodajDziecko(Drzewo drzwo, Ruch ruch)
+void dodajDziecko(Drzewo drzwo, Ruch ruch,int index)
 {
-//	// Sprawdzenie, czy 'drzwo' jest nullptr
-//	if (drzwo == nullptr) {
-//		cout << " blad!!!!";
-//		return nullptr;
-//	}
-//
-//	// Tworzenie nowego dziecka
-////	Drzewo dziecko = new ElementDrzewa();  // Przypisanie rodzica
-//
-//	// Tworzenie kopii planszy i ruchu
-//	dziecko->plansza = new Plansza(*drzwo->plansza);
-//	dziecko->ruch = new Ruch(ruch);  // Tworzymy kopiê ruchu
-//
-//	// Wykonanie ruchu na planszy
-//	dziecko->plansza->wykonajRuch(ruch);
-//
-//	// Dodanie nowego dziecka do wektora 'dzieci'
-//	drzwo->dzieci.push_back(dziecko);
-//
-//	// Zwrócenie nowego dziecka
-//	return dziecko;
-	return nullptr;
+	ElementDrzewa* dziecko = new ElementDrzewa();
+	dziecko->plansza = new Plansza(*drzwo->plansza);
+	dziecko->ruch = new Ruch(ruch);  
+	dziecko->plansza->wykonajRuch(ruch);
+	dziecko->rodzic = drzwo;
+	drzwo->dzieci[index] = dziecko;
 }
